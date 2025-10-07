@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Previsão de Crimes - Recife</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Sistema de Previsão de Crimes</h1>
+            <p>Análise preditiva de ocorrências criminais na Região Metropolitana do Recife</p>
+        </header>
+
+        <div class="main-content">
+            <div class="filters-section">
+                <h2>Filtros de Consulta</h2>
+                <form id="prediction-form">
+                    <div class="form-group">
+                        <label for="cidade">Cidade:</label>
+                        <select id="cidade" name="cidade" required>
+                            <option value="">Selecione uma cidade</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="bairro">Bairro:</label>
+                        <select id="bairro" name="bairro" required>
+                            <option value="">Selecione um bairro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="tipo_crime">Tipo de Crime:</label>
+                        <select id="tipo_crime" name="tipo_crime" required>
+                            <option value="">Selecione um tipo de crime</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dia">Data:</label>
+                        <input type="date" id="dia" name="dia" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hora">Hora (opcional):</label>
+                        <input type="time" id="hora" name="hora">
+                    </div>
+
+                    <button type="submit" class="btn-submit">Analisar Probabilidade</button>
+                </form>
+
+                <div id="result-section" class="result-section" style="display: none;">
+                    <h3>Resultado da Análise</h3>
+                    <div class="probability-display">
+                        <div class="probability-value" id="probability-value">0%</div>
+                        <div class="probability-label">Probabilidade de Ocorrência</div>
+                    </div>
+                    <div class="probability-bar">
+                        <div class="probability-fill" id="probability-fill"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map-section">
+                <h2>Mapa de Histórico de Ocorrências</h2>
+                <div id="map"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="../static/js/script.js"></script>
+</body>
+</html>
