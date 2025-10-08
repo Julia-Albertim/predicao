@@ -3,9 +3,10 @@ from flask import Flask, request, jsonify
 import joblib
 import pandas as pd
 import numpy as np
+from flask_cors import CORS
 
 app = Flask(__name__)
-
+CORS(app)
 # Carregar o modelo e os mapeamentos
 try:
     model = joblib.load("model.pkl")
@@ -79,5 +80,6 @@ def metadata():
     })
 
 if __name__ == "__main__":
-    app.run(debug=True, host=\"0.0.0.0\", port=5000)
+    app.run(debug=True, host="0.0.0.0", port=5000)
+
 
