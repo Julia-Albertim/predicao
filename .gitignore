@@ -1,0 +1,32 @@
+# Ambientes Virtuais do Python
+# Nunca cometa o ambiente virtual no repositório!
+venv/
+env/
+.venv/
+.env/
+virtualenv/
+
+# Cache e arquivos compilados do Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Arquivos de modelo e mapeamento gerados pelo script de treino
+# O ideal é versionar o CÓDIGO que gera esses arquivos, não os arquivos em si.
+*.pkl
+
+
+
+# Arquivos de configuração de IDEs e editores de código
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Arquivos de log
+*.log
+
+# Arquivos de sistema operacional
+.DS_Store
+Thumbs.db
