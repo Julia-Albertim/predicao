@@ -218,7 +218,7 @@ plt.show()
 
 
 # ---------------------------
-# ⚠️ ADICIONANDO VIOLÊNCIA DOMÉSTICA E OUTROS PARÂMETROS
+VIOLÊNCIA DOMÉSTICA E OUTROS PARÂMETROS
 # ---------------------------
 
 # Flag para Violência Doméstica
