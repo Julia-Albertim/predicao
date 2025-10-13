@@ -5,7 +5,6 @@ from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_sc
 from xgboost import XGBClassifier
 import joblib
 
-# ... (Seu código de carregamento e pré-processamento continua o mesmo) ...
 # ---------------------------
 # 1️⃣ Carregar CSV
 # ---------------------------
